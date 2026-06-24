@@ -106,19 +106,26 @@ class _MovieDetailPageState extends State<MovieDetailPage> {
                                     Text('${movie.runtime} min'),
                                   ],
                                 ),
-                                const SizedBox(height: 8),
-                                Wrap(
-                                  spacing: 6,
-                                  children: movie.genres
-                                      .map((g) => Chip(label: Text(g)))
-                                      .toList(),
-                                ),
+                                // 1. Kondisi Genres
+                                movie.genres == null || movie.genres!.isEmpty
+                                    ? const Text(
+                                        'Genre tidak tersedia',
+                                        style: TextStyle(
+                                          color: Colors.grey,
+                                          fontStyle: FontStyle.italic,
+                                        ),
+                                      )
+                                    : Wrap(
+                                        spacing: 6,
+                                        children: movie.genres
+                                            .map((g) => Chip(label: Text(g)))
+                                            .toList(),
+                                      ),
                               ],
                             ),
                           ),
                         ],
                       ),
-
                       const SizedBox(height: 16),
                       const Text(
                         'Sinopsis',

@@ -1,17 +1,25 @@
-# fakhriflix
+# FakhriFlix 🎬
 
-A new Flutter project.
+FakhriFlix is a modern movie catalog application powered by the TMDB API. It features a sleek, high-contrast Black and Yellow theme designed for an optimal viewing experience.
 
-## Getting Started
+## ✨ Features
 
-This project is a starting point for a Flutter application.
+- **Movie Exploration:** Browse popular, top-rated, and upcoming movies.
+- **Search Functionality:** Find your favorite movies instantly with the integrated search bar calling the `/search/movie` endpoint.
+- **Robust Error Handling:** Seamless UI experience with intelligent null-handling for empty genres and trailers.
+- **Comprehensive Reviews:** Read what others think. Features a dedicated 'All Reviews' page complete with smooth scroll pagination.
+- **Modern UI/UX:** Styled with a professional Black & Yellow (EY-inspired) color palette.
 
-A few resources to get you started if this is your first Flutter project:
+## 🛠 Tech Stack & Architecture
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+- **Framework:** Flutter / Dart
+- **HTTP Client:** [Dio](https://pub.dev/packages/dio) for robust API requests & error handling
+- **API:** [The Movie Database (TMDB)](https://www.themoviedb.org/)
+- **Architecture/State Management:** (Tulis state management kamu di sini)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🚀 Getting Started
+
+1. **Clone the repository**
+   ```bash
+   git clone [https://github.com/aiyeuh21/FakhriFlix.git](https://github.com/aiyeuh21/FakhriFlix.git)
+   ```
