@@ -67,4 +67,13 @@ class ApiServiceDio {
       throw Exception('Gagal memuat similar movie: ${e.message}');
     }
   }
+
+  Future<MovieResponse> searchMovies(String query) async {
+    final response = await _dio.get(
+      '/search/movie',
+      queryParameters: {'query': query},
+    );
+
+    return MovieResponse.fromJson(response.data);
+  }
 }

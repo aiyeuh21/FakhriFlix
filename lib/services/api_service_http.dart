@@ -63,4 +63,20 @@ class ApiServiceHttp {
       throw Exception('Gagal memuat similar movie: ${response.statusCode}');
     }
   }
+
+  // 5. GET Search Movie
+  Future<MovieResponse> searchMovie(String keyword) async {
+    final url = Uri.parse(
+      '${ApiConstants.baseUrl}/search/movie?query=$keyword',
+    );
+
+    final response = await http.get(url, headers: ApiConstants.headers);
+
+    if (response.statusCode == 200) {
+      final data = json.decode(response.body);
+      return MovieResponse.fromJson(data);
+    } else {
+      throw Exception('Gagal memuat data movie: ${response.statusCode}');
+    }
+  }
 }
